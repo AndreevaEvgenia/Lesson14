@@ -5,10 +5,6 @@ begin
   result:=not((year mod 4 <> 0) or  (year mod 100 = 0)and(year mod 400 <> 0));
 end;
 
-function SecondsInMinute(minute:integer):integer;
-begin
-  result:=60;
-end;
 begin
 var d: DateTime := DateTime.Now;
   writeln(d.Day,'.',d.Month,'.',d.Year);
