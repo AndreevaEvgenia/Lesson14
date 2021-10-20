@@ -13,9 +13,14 @@ end;
 function DaysInYear(year:integer):integer;
 begin
   if IsLeapYear(year) then result:=366
-  else result:=366;
+  else result:=365;
 end;
 
+function DaysInYearRange(year1, year2:integer):integer;
+begin
+  for var i:=year1 to year2 do
+    result+=DaysInYear(i);
+end;
 
 begin
 var d: DateTime := DateTime.Now;
@@ -28,5 +33,6 @@ var d: DateTime := DateTime.Now;
   println (IsLeapYear(2013));
   println (DaysInYear(2013));
   println (DaysInYear(2012));
+  println (DaysInYearRange(2012,2013));
    
 end.
