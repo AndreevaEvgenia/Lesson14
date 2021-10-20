@@ -22,6 +22,11 @@ begin
     result+=DaysInYear(i);
 end;
 
+function SeconsInHours(hours:integer):integer;
+begin
+  result:=3600;
+end;
+
 begin
 var d: DateTime := DateTime.Now;
   writeln(d.Day,'.',d.Month,'.',d.Year);
